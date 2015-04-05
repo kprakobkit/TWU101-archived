@@ -12,7 +12,10 @@ public class TriangleExercises {
         drawHorizontalLine(5);
 
         System.out.println("Draw a vertical line;");
-        drawVerticalLine(5);
+        drawVerticalLine(3);
+
+        System.out.println("Draw a right triangle");
+        drawRightTriangle(3);
     }
 
     public static void easiestExercisesEver() {
@@ -29,6 +32,19 @@ public class TriangleExercises {
     public static void drawVerticalLine(int lineHeight) {
         for (int i = 0; i < lineHeight; i++) {
             System.out.println("*");
+        }
+    }
+
+    public static void  drawRightTriangle(int triangleHeight) {
+        int currentHeight = 1;
+
+        while (currentHeight <= triangleHeight) {
+            for (int i = 0; i < currentHeight; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+            currentHeight++;
         }
     }
 }
