@@ -39,11 +39,7 @@ public class TriangleExercises {
         int currentHeight = 1;
 
         while (currentHeight <= triangleHeight) {
-            for (int i = 0; i < currentHeight; i++) {
-                System.out.print("*");
-            }
-            System.out.println();
-
+            drawHorizontalLine(currentHeight);
             currentHeight++;
         }
     }
