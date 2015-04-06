@@ -14,7 +14,7 @@ public class TriangleExercises {
         System.out.println("Draw a vertical line;");
         drawVerticalLine(3);
 
-        System.out.println("Draw a right triangle");
+        System.out.println("Draw a right triangle:");
         drawRightTriangle(3);
     }
 

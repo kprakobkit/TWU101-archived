@@ -6,6 +6,7 @@ package Chapter2;
 public class IncrementorTestDrive {
     public static void main(String[] args) {
         Incrementor incrementor = new Incrementor();
+
         for (int i = 0; i < 5; i++) {
            incrementor.increment();
         }
