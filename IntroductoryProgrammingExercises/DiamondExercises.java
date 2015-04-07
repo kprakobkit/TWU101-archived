@@ -16,7 +16,8 @@ public class DiamondExercises {
     }
 
     public static void drawIsoscelesTriangle(int height) {
-        drawTop(height);
+        drawTop(height - 1);
+        drawBase(height);
     }
 
     public static void drawDiamond(int n) {
@@ -25,7 +26,8 @@ public class DiamondExercises {
     }
 
     public static void drawDiamondWithName(int n) {
-        drawIsoscelesTriangle(n);
+        drawTop(n - 1);
+        printName();
         drawBottom(n - 1);
     }
 
@@ -33,7 +35,7 @@ public class DiamondExercises {
         int currentHeight = 1;
 
         for (int i = 0; i < height; i++) {
-            printSpaces(height - currentHeight);
+            printSpaces((height - currentHeight) + 1);
             TriangleExercises.drawHorizontalLine((currentHeight * 2) - 1);
             currentHeight++;
         }
@@ -49,10 +51,17 @@ public class DiamondExercises {
         }
     }
 
+    public static void drawBase(int height) {
+        TriangleExercises.drawHorizontalLine((height * 2) - 1);
+    }
+
     public static void printSpaces(int numOfSpaces) {
         for (int i = 0; i < numOfSpaces; i++) {
             System.out.print(" ");
         }
     }
 
+    public static void printName() {
+        System.out.println("Peter");
+    }
 }
