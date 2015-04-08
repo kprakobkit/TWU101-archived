@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class PrimeFactors {
     public static void main(String[] args) {
         ArrayList<Integer> primeFactors = getPrimeFactors(30);
-        System.out.println("primeFactors = " + primeFactors);
+        System.out.println("Prime Factors = " + primeFactors);
     }
 
     public static ArrayList<Integer> getPrimeFactors(int n) {
