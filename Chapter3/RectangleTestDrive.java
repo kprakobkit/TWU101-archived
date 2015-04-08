@@ -6,9 +6,7 @@ package Chapter3;
 public class RectangleTestDrive {
     public static void main(String[] args) {
         Rectangle[] rectangles = rectanglesConstructor(5);
-        double averageArea;
-
-        averageArea = findAverageArea(rectangles);
+        double averageArea = findAverageArea(rectangles);
 
         System.out.println("Average area = " + averageArea);
     }
