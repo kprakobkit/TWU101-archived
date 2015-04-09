@@ -9,7 +9,7 @@ public class RectangleTwoTestDrive {
 
         for (int i = 0; i < rectangles.length; i++) {
             RectangleTwo rectangle = rectangles[i];
-            System.out.println("Rectangle " + (i+1) + " Height: " + rectangle.height + " Width: " + rectangle.width);
+            System.out.println("Rectangle " + (i+1) + " Height: " + rectangle.getHeight() + " Width: " + rectangle.getWidth());
             System.out.println("Area = " + rectangle.area());
             System.out.println("Perimeter = " + rectangle.perimeter());
         }
