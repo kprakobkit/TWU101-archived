@@ -1,5 +1,6 @@
 package Chapter5;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -7,28 +8,26 @@ import java.util.Scanner;
  * Created by kprakobkit on 4/9/15.
  */
 public class GuessingGame {
-    private int answer;
-    private int userGuess;
-    private boolean complete;
+    private int guess;
+    private boolean done;
+    private GameHelper gameHelper = new GameHelper();
 
-    public GuessingGame() {
-        answer = (int)(Math.random() * 100);
-    }
+    // Generate a random number between 1 - 100 and assign it to answer.
+    private Random rn = new Random();
+    private int answer = rn.nextInt(100) + 1;
 
     public void start() {
-        while (complete != true) {
-            Scanner reader = new Scanner(System.in);
-            System.out.println("Guess a number between 1 - 100: ");
+        while (done != true) {
+            String guessString = gameHelper.getUserInput("Guess a number between 1 - 100: ");
+            guess = Integer.parseInt(guessString);
 
-            userGuess = reader.nextInt();
-
-            if (userGuess > answer) {
+            if (guess > answer) {
                 System.out.println("The answer is lower, please try again.");
-            } else if (userGuess < answer) {
+            } else if (guess < answer) {
                 System.out.println("The answer is higher, please try again.");
-            } else if (userGuess == answer) {
+            } else if (guess == answer) {
                 System.out.println("You are correct! Thank you for playing");
-                complete = true;
+                done = true;
             }
         }
     }
