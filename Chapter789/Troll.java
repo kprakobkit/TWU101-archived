@@ -5,8 +5,6 @@ package Chapter789;
  */
 public class Troll extends Creature implements Monster {
     public Troll() {
-        this.hitPoints = 40;
-        this.name = "Troll";
-        this.damageFactor = 0.5;
+        super(40, "Troll", 0.5);
     }
 }

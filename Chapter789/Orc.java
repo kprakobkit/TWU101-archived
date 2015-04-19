@@ -5,8 +5,6 @@ package Chapter789;
  */
 public class Orc extends Creature implements Monster {
     public Orc() {
-        this.hitPoints = 20;
-        this.name = "Orc";
-        this.damageFactor = 1;
+        super(20, "Orc", 1);
     }
 }
