@@ -7,18 +7,18 @@ import java.util.ArrayList;
  */
 public class Chapter789TestDrive {
     public static void main(String[] args) {
-        ArrayList<Creature> creatures = new ArrayList<Creature>();
+        ArrayList<AbstractMonster> creatures = new ArrayList<AbstractMonster>();
         Orc orc = new Orc();
         Troll troll = new Troll();
         creatures.add(orc);
         creatures.add(troll);
 
-        for (Creature creature:creatures) {
+        for (AbstractMonster creature:creatures) {
             creature.takeDamage(10);
         }
 
         System.out.println("Report: ");
-        for (Creature creature:creatures) {
+        for (AbstractMonster creature:creatures) {
             System.out.println("Name = " + creature.name());
             System.out.println("Hit Points = " + creature.currentHitPoints());
         }

@@ -3,12 +3,12 @@ package Chapter789;
 /**
  * Created by kprakobkit on 4/10/15.
  */
-public abstract class Creature implements Monster {
+public abstract class AbstractMonster implements Monster {
     private int hitPoints;
     private String name;
     private double damageFactor;
 
-    public Creature(int iHitPoints, String iName, double iDamageFactor) {
+    public AbstractMonster(int iHitPoints, String iName, double iDamageFactor) {
         hitPoints = iHitPoints;
         name = iName;
         damageFactor = iDamageFactor;
