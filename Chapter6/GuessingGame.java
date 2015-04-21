@@ -22,8 +22,6 @@ public class GuessingGame {
         String result;
 
         while (gameOver != true) {
-            System.out.println("answer = " + answer);
-            gameOver = true;
             String guessString = gameHelper.getUserInput("Guess a number between 1 - 100: ");
             guess = Integer.parseInt(guessString);
             result = checkUserInput(guess);
@@ -37,11 +35,11 @@ public class GuessingGame {
         String result = "";
 
         if (guess > answer) {
-            result = "The answer is lower, please try again.";
+            result = "Your guess was too high.";
         } else if (guess < answer) {
-            result = "The answer is higher, please try again.";
+            result = "Your guess was too low.";
         } else if (guess == answer) {
-            result = "You are correct! Thank you for playing";
+            result = "You are correct! Thank you for playing.";
             gameOver = true;
         }
 
